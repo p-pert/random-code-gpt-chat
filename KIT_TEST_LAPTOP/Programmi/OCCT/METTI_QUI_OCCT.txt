@@ -1,0 +1,6 @@
+﻿Qui deve esserci OCCT.exe (lo script 0_PREPARA_CHIAVETTA_A_CASA lo mette da solo).
+
+Download manuale, solo dal sito ufficiale:
+  https://www.ocbase.com/download
+Scegli edizione "Personal" (gratuita per uso personale, NON serve account) e sistema "Windows".
+E' un unico file .exe portatile: salvalo qui e rinominalo OCCT.exe.

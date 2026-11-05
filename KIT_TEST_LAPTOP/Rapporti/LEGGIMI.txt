@@ -1,0 +1,6 @@
+﻿In questa cartella finiscono i rapporti creati dagli script e i log di HWiNFO:
+- Controllo_....txt        -> risultato del controllo automatico
+- MonitorGPU_....csv/.txt  -> dati e giudizio del monitor GPU
+- AnalisiHWiNFO_....txt    -> analisi del log di HWiNFO
+- VERSIONI_PROGRAMMI.txt   -> versioni e firme dei programmi scaricati
+Quando registri il log in HWiNFO, salvalo qui (es. test_FA507NV.csv).

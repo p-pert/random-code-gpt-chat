@@ -1,0 +1,7 @@
+[Settings]
+; Avvia direttamente la finestra dei sensori (temperature, consumi, frequenze)
+SensorsOnly=1
+SummaryOnly=0
+; Nessun controllo aggiornamenti (si lavora offline)
+AutoUpdate=0
+AutoUpdateBetaDisable=1

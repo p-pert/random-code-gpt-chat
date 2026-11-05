@@ -1,0 +1,37 @@
+﻿=====================================================================
+ SCHEDA RAPIDA - TEST ASUS TUF A15 FA507NV (RTX 4060)    Data: ______
+=====================================================================
+ PRIMA: alimentatore ORIGINALE collegato | Fn+F5 = "Prestazioni"
+        Armoury Crate > Modalita' GPU = "Standard" (non "Eco")
+
+ 00:00  Chiavetta inserita, apri KIT_TEST_LAPTOP
+ 01:00  1_CONTROLLO_AUTOMATICO.bat  -> "Si'" ai permessi -> righe rosse?
+ 02:30  GPU-Z ("No" all'installazione): RTX 4060 Laptop | AD107 |
+        3072 shader | 8192 MB GDDR6 | 128 bit | PCIe x8 4.0
+ 04:00  HWiNFO64 -> annota riposo -> START LOGGING in Rapporti -> Reset
+        CPU riposo: ____ C   GPU riposo: ____ C
+ 05:00  OCCT -> "3D Standard" -> GPU = RTX 4060 -> error detection ON
+        -> START, poi 2_MONITOR_GPU_8_MINUTI.bat
+ 06-14  Osserva: artefatti? errori OCCT? ventole? aria calda? odori?
+        A 8 min: GPU ____ C  ____ W  ____ MHz | CPU ____ C
+ 14:00  Stop OCCT -> stop logging -> 3_ANALIZZA_LOG_HWINFO.bat
+
+ RIFERIMENTI SOTTO CARICO (dopo 5-8 min)
+   GPU temp : 65-80 ottimo | 81-87 normale | 88-91 attenzione | 92+ NO
+   GPU W    : 80-115 W (Prestazioni), fino a ~140 W (Turbo); <60 W = indaga
+   GPU MHz  : 1800-2400 stabile; <1500 con temp alta = raffreddamento KO
+   CPU temp : fino a 85 ok | 85-95 accettabile | 95 fisso + <3 GHz = NO
+   SSD temp : < 70 C        WHEA Total Errors: 0
+
+ NON COMPRARE SE                         TRATTARE SUL PREZZO SE
+ [ ] RTX 4050 / 6 GB / modello diverso    [ ] Batteria < 80% salute
+ [ ] Codice 43 / GPU assente              [ ] 1 solo modulo RAM
+ [ ] Artefatti, crash, schermo nero       [ ] GPU 88-91 C (pulizia)
+ [ ] Errori in OCCT (anche 1)             [ ] Alimentatore non originale
+ [ ] GPU >= 92 C o MHz che crollano       [ ] Pixel morti / tasti / cerniere
+ [ ] Ventola ferma o rumore metallico     [ ] SSD usura 40-79%
+ [ ] SSD non integro / usura >= 80%       [ ] Windows non attivato
+ [ ] Seriale BIOS != etichetta
+
+ ESITO:  [ ] SUPERATO   [ ] DA TRATTARE   [ ] NON SUPERATO
+=====================================================================

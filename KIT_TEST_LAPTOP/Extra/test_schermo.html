@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Test schermo</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; cursor: pointer; font-family: Segoe UI, Arial, sans-serif; }
+  #info { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,.75); color: #fff;
+          padding: 24px 32px; border-radius: 10px; max-width: 560px; line-height: 1.5; font-size: 16px; }
+  #nome { position: fixed; bottom: 12px; right: 16px; font-size: 13px; color: #888; mix-blend-mode: difference; }
+  #griglia { position: fixed; inset: 0; display: none;
+             background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px);
+             background-size: 40px 40px; background-color: #000; }
+  #sfumatura { position: fixed; inset: 0; display: none; background: linear-gradient(90deg, #000, #fff); }
+</style>
+</head>
+<body>
+<div id="griglia"></div>
+<div id="sfumatura"></div>
+<div id="info">
+  <b>Test schermo (funziona offline)</b><br>
+  1. Premi <b>F11</b> per lo schermo intero.<br>
+  2. <b>Clic</b>, <b>barra spaziatrice</b> o <b>frecce</b> per cambiare colore.<br>
+  3. Cerca <b>pixel morti</b> (puntini sempre neri o sempre colorati), <b>macchie</b>, <b>aloni</b> agli angoli sul nero.<br>
+  4. Sulla sfumatura grigia non devono esserci bande evidenti; sulla griglia le linee devono essere dritte.<br>
+  <b>Esc</b> per uscire dallo schermo intero. Clic per iniziare.
+</div>
+<div id="nome"></div>
+<script>
+  var schermate = [
+    ['Nero', '#000000'], ['Bianco', '#ffffff'], ['Rosso', '#ff0000'], ['Verde', '#00ff00'],
+    ['Blu', '#0000ff'], ['Grigio 50%', '#808080'], ['Grigio scuro', '#202020'], ['Sfumatura', 'sfumatura'], ['Griglia', 'griglia']
+  ];
+  var i = -1;
+  var info = document.getElementById('info'), nome = document.getElementById('nome');
+  var gr = document.getElementById('griglia'), sf = document.getElementById('sfumatura');
+  function mostra(n) {
+    i = (n + schermate.length) % schermate.length;
+    info.style.display = 'none';
+    gr.style.display = 'none'; sf.style.display = 'none';
+    var s = schermate[i];
+    if (s[1] === 'griglia') { gr.style.display = 'block'; }
+    else if (s[1] === 'sfumatura') { sf.style.display = 'block'; }
+    else { document.body.style.background = s[1]; }
+    nome.textContent = (i + 1) + '/' + schermate.length + ' - ' + s[0];
+  }
+  document.addEventListener('click', function () { mostra(i + 1); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown') { e.preventDefault(); mostra(i + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); mostra(i - 1); }
+  });
+</script>
+</body>
+</html>

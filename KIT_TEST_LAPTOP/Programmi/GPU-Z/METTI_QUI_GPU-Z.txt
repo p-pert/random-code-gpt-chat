@@ -1,0 +1,6 @@
+﻿Qui deve esserci GPU-Z.exe (lo script 0_PREPARA_CHIAVETTA_A_CASA lo mette da solo).
+
+Download manuale, solo dal sito ufficiale:
+  https://www.techpowerup.com/download/techpowerup-gpu-z/
+Scegli la versione standard (non "ASUS ROG"), salva il file qui e rinominalo GPU-Z.exe.
+All'avvio GPU-Z chiede se installarlo: rispondi "No" (modalita' portatile, nessuna installazione).

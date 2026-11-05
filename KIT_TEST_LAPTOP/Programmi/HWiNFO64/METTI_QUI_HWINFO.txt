@@ -1,0 +1,8 @@
+﻿Qui devono esserci i file della versione PORTABLE di HWiNFO (HWiNFO64.exe e gli altri del file ZIP).
+Lo script 0_PREPARA_CHIAVETTA_A_CASA li scarica ed estrae da solo.
+
+Download manuale, solo dal sito ufficiale:
+  https://www.hwinfo.com/download/
+Scegli "Portable" (file ZIP, es. hwi_852.zip), estrai TUTTO il contenuto in questa cartella.
+Copia anche il file ..\..\Script\HWiNFO64.INI.modello qui dentro rinominandolo HWiNFO64.INI
+(fa partire HWiNFO direttamente in modalita' "solo sensori").
